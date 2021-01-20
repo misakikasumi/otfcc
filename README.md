@@ -139,6 +139,16 @@ ninja otfccdump_release_x64 otfccbuild_release_x64
 
 Change the targets above when necessary.
 
+#### Building on ARM64
+
+You should first build an ARM version of premake5 following the [instruction](https://github.com/premake/premake-core/wiki/Building-Premake).
+Then run:
+```bash
+premake5 gmake
+cd build/gmake
+make config=release_arm
+```
+
 ### Windows
 
 On Windows, building `otfcc` is tested under the toolchains listed below. The default `premake5 vs2015` will produce a Visual Studio solution using Clang-CL as its compiler.
